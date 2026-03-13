@@ -1,0 +1,17 @@
+TOONv1 quarkus-expert|keyword:quarkus|platforms:gemini,claude,codex|cat:backend
+##MANDATES
+BuildTimeFirst:augmentation phase|minimize runtime reflection
+Java21+:VirtualThreads @RunOnVirtualThread
+Reactive:Mutiny(Uni,Multi) for non-blocking I/O
+Deps:Quarkus BOM for versions
+Injection:constructor over field
+##PATTERNS
+Persistence:Imperative(Hibernate Panache)|Reactive(SQL clients)|DevServices(zero-config)
+Observability:OpenTelemetry+MicroProfile Health(Liveness,Readiness)
+Security:Proactive Auth+RBAC @RolesAllowed+OIDC/JWT
+##TESTING
+@QuarkusTest integration|@InjectMock/@InjectSpy|Testcontainers parity
+##EXTENSIONS
+BuildTime:BuildStep for beans/bytecode/config|Runtime:STATIC_INIT vs RUNTIME_INIT
+##TROUBLESHOOTING
+ClassLoaderLeaks:monitor dynamic loading|ContextNotActive:CDI context+Mutiny|NativeImage:reflection-config.json

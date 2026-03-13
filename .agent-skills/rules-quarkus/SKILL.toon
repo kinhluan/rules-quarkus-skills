@@ -1,0 +1,22 @@
+TOONv1 rules-quarkus|keyword:rules-quarkus|platforms:gemini,claude,codex|cat:backend
+##OVERVIEW
+Native Bazel integration for Quarkus|Solves:Quarkus#11305(open since 2020)|Reconciles Augmentation phase with Bazel hermeticity
+##ARCHITECTURE(3-Layer Pipeline)
+1.Compilation(java_library):compile bytecode+maximize caching
+2.Augmentation(quarkus_bootstrap):aggregate deps+ApplicationModel+AugmentAction in sandbox
+3.Orchestration(quarkus_runner):Quarkus classloading+Runfiles path resolution
+##MACROS
+quarkus_application:executable app+srcs+runtime/deployment extensions
+quarkus_library:reusable libraries
+##EXTENSIONS(5-Tier)
+T1:Core(Arc,REST,Jackson,Vert.x)|T2:Persistence(Oracle,MySQL,Redis)|T3:Messaging(Kafka,RabbitMQ,gRPC)|T4:Observability(Prometheus,Health)|T5:Quarkiverse(LangChain4j,Tika,Unleash)
+##KEY_APIS
+QuarkusBootstrap API|ApplicationModel(deterministic)|AugmentAction(sandboxed)|quarkus_bootstrap rule|quarkus_runner
+##TROUBLESHOOTING
+CDIProvider/ClassNotFound:getOrCreateAugmentClassLoader()+TCCL switch+reflection for AugmentActionImpl
+ArgListTooLong:param files+expandArgs @filename
+TypeNotFound:ensure DEPLOYMENT_CP flag in ApplicationModelFactory
+##TIPS
+No system env in augmentation|Launch:QuarkusEntryPoint+boot/*,main/* classpath|Prefer java_outputs|Hermetic+deterministic builds
+##REFS
+repo:github.com/kinhluan/rules_quarkus|blog:2026-03-11-bazel-support-for-quarkus|quarkus.io/guides|bazel.build

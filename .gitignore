@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Node/Python artifacts (if any)
+node_modules/
+__pycache__/
+*.pyc
+
+# Local settings
+.env
+.gemini/tmp/

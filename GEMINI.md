@@ -46,14 +46,17 @@
 
 ## 🚀 Installation
 
-### Option 1: Copy to Gemini/Qwen skills directory
+### Option 1: Copy to skills directory
 
 ```bash
 # For Gemini CLI
 cp -r .agent-skills/* ~/.gemini/skills/
 
-# For Qwen Code CLI  
+# For Qwen Code  
 cp -r .agent-skills/* ~/.qwen/skills/
+
+# For Claude Code
+cp -r .agent-skills/* ~/.claude/skills/
 ```
 
 ### Option 2: Activate directly in session

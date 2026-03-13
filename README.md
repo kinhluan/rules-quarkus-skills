@@ -4,6 +4,7 @@
 [![Validate Skills](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-Skill-blue)](https://geminicli.com)
 [![Qwen Code](https://img.shields.io/badge/Qwen%20Code-Skill-purple)](https://github.com/QwenLM/qwen-code)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-orange)](https://claude.ai/code)
 
 > **Expert AI skills for building Quarkus applications with Bazel**
 >
@@ -139,6 +140,9 @@ cp -r .agent-skills/* ~/.gemini/skills/
 # For Qwen Code
 cp -r .agent-skills/* ~/.qwen/skills/
 
+# For Claude Code
+cp -r .agent-skills/* ~/.claude/skills/
+
 # For Google Antigravity
 cp -r .agent-skills/* ~/.gemini/antigravity/skills/
 ```
@@ -212,6 +216,7 @@ rules-quarkus-skills/
 | [Bazel](https://bazel.build) | Fast, scalable build system |
 | [Gemini CLI](https://geminicli.com) | Google's AI-powered CLI tool |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | Alibaba's AI coding assistant |
+| [Claude Code](https://claude.ai/code) | Anthropic's AI coding assistant |
 
 ---
 

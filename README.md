@@ -1,6 +1,7 @@
 # rules-quarkus-skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Validate Skills](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-Skill-blue)](https://geminicli.com)
 [![Qwen Code](https://img.shields.io/badge/Qwen%20Code-Skill-purple)](https://github.com/QwenLM/qwen-code)
 

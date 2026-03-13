@@ -1,0 +1,100 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main, release/*]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Validate SKILL.md files exist
+      run: |
+        echo "Checking for required SKILL.md files..."
+        for dir in .agent-skills/*/; do
+          if [ ! -f "${dir}SKILL.md" ]; then
+            echo "❌ Missing SKILL.md in ${dir}"
+            exit 1
+          fi
+          echo "✅ Found SKILL.md in ${dir}"
+        done
+
+    - name: Validate YAML frontmatter
+      run: |
+        echo "Validating YAML frontmatter in SKILL.md files..."
+        for file in .agent-skills/*/SKILL.md; do
+          if ! head -1 "$file" | grep -q "^---$"; then
+            echo "❌ Missing YAML frontmatter in $file"
+            exit 1
+          fi
+          echo "✅ Valid frontmatter in $file"
+        done
+
+    - name: Validate SKILL.toon files (if present)
+      run: |
+        echo "Checking SKILL.toon files..."
+        for file in .agent-skills/*/SKILL.toon; do
+          if [ -f "$file" ]; then
+            if ! head -1 "$file" | grep -q "^TOONv1"; then
+              echo "❌ Invalid TOON format in $file"
+              exit 1
+            fi
+            echo "✅ Valid TOON format in $file"
+          fi
+        done
+
+    - name: Validate skills.json (if present)
+      run: |
+        if [ -f ".agent-skills/skills.json" ]; then
+          echo "Validating skills.json..."
+          python3 -c "import json; json.load(open('.agent-skills/skills.json'))" && echo "✅ Valid JSON" || exit 1
+        else
+          echo "⚠️ skills.json not found (optional)"
+        fi
+
+    - name: Check README.md exists
+      run: |
+        if [ ! -f "README.md" ]; then
+          echo "❌ Missing README.md"
+          exit 1
+        fi
+        echo "✅ README.md found"
+
+    - name: Check LICENSE exists
+      run: |
+        if [ ! -f "LICENSE" ]; then
+          echo "❌ Missing LICENSE"
+          exit 1
+        fi
+        echo "✅ LICENSE found"
+
+    - name: Validate markdown links (basic check)
+      run: |
+        echo "Checking for broken markdown syntax..."
+        for file in $(find . -name "*.md" -not -path "./.git/*"); do
+          # Check for unclosed links
+          if grep -n "\[.*\]($\|^\[.*\])" "$file" > /dev/null 2>&1; then
+            echo "⚠️ Potential broken link in $file"
+          fi
+        done
+        echo "✅ Markdown syntax check passed"
+
+    - name: Summary
+      run: |
+        echo ""
+        echo "==================================="
+        echo "✅ All validation checks passed!"
+        echo "==================================="
+        echo ""
+        echo "Skills ready for:"
+        echo "  - Gemini CLI"
+        echo "  - Qwen Code"
+        echo "  - Google Antigravity"
+        echo "  - skills.sh"
+        echo ""

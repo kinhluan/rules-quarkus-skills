@@ -1,5 +1,6 @@
 # rules-quarkus-skills
 
+[![Release](https://img.shields.io/github/v/release/kinhluan/rules-quarkus-skills)](https://github.com/kinhluan/rules-quarkus-skills/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Validate Skills](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/kinhluan/rules-quarkus-skills/actions/workflows/validate.yml)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-Skill-blue)](https://geminicli.com)
@@ -43,7 +44,7 @@ These skills encode the **Three-Layer Transformation Pipeline** and architectura
 |---|---|
 | **Keyword** | `rules-quarkus` |
 | **Category** | Backend / Build Systems |
-| **Platforms** | Gemini CLI, Qwen Code, Antigravity |
+| **Platforms** | All major AI agents (Gemini CLI, Qwen Code, Claude Code, Cursor, etc.) |
 
 **What it covers:**
 
@@ -89,7 +90,7 @@ These skills encode the **Three-Layer Transformation Pipeline** and architectura
 |---|---|
 | **Keyword** | `quarkus` |
 | **Category** | Backend / Frameworks |
-| **Platforms** | Gemini CLI, Qwen Code, Antigravity |
+| **Platforms** | All major AI agents (Gemini CLI, Qwen Code, Claude Code, Cursor, etc.) |
 
 **What it covers:**
 - **Build-Time First**: Augmentation phase optimization
@@ -113,7 +114,7 @@ These skills encode the **Three-Layer Transformation Pipeline** and architectura
 |---|---|
 | **Keyword** | `bazel` |
 | **Category** | Infrastructure / Build Tools |
-| **Platforms** | Gemini CLI, Qwen Code, Antigravity |
+| **Platforms** | All major AI agents (Gemini CLI, Qwen Code, Claude Code, Cursor, etc.) |
 
 **What it covers:**
 - **Starlark Best Practices**: Rules vs Macros, Providers, depsets
@@ -131,7 +132,15 @@ These skills encode the **Three-Layer Transformation Pipeline** and architectura
 
 ## 🚀 Installation
 
-### Option 1: Copy to config directory (Recommended)
+### Option 1: Install via skills CLI (Recommended)
+
+```bash
+npx skills add kinhluan/rules-quarkus-skills
+```
+
+This automatically installs all skills to your configured AI agents.
+
+### Option 2: Copy to config directory
 
 ```bash
 # For Gemini CLI
@@ -147,7 +156,7 @@ cp -r .agent-skills/* ~/.claude/skills/
 cp -r .agent-skills/* ~/.gemini/antigravity/skills/
 ```
 
-### Option 2: Activate in session
+### Option 3: Activate in session
 
 ```bash
 # In Gemini CLI or Qwen Code
@@ -155,6 +164,9 @@ activate_skill .agent-skills/rules-quarkus
 activate_skill .agent-skills/quarkus-expert
 activate_skill .agent-skills/bazel-expert
 ```
+
+> [!NOTE]
+> The `.agent-skills/` directory is **agent-agnostic** - it works with any AI agent that supports skill/plugin systems. Agent-specific configs (`.qwen/`, `.claude/`, etc.) are for local development only and should not be committed.
 
 ---
 
@@ -190,7 +202,7 @@ What are the trade-offs?
 
 ```
 rules-quarkus-skills/
-├── .agent-skills/
+├── .agent-skills/              # Agent-agnostic skills (published)
 │   ├── rules-quarkus/
 │   │   ├── SKILL.md          # Human-readable documentation
 │   │   └── SKILL.toon        # Compressed format (token-efficient)
@@ -200,10 +212,14 @@ rules-quarkus-skills/
 │   └── bazel-expert/
 │       ├── SKILL.md
 │       └── SKILL.toon
-├── GEMINI.md                  # Extension metadata
-├── README.md                  # This file
-└── LICENSE                    # MIT License
+├── .github/                    # GitHub Actions workflows
+├── GEMINI.md                   # Extension metadata
+├── README.md                   # This file
+└── LICENSE                     # MIT License
 ```
+
+> [!TIP]
+> Agent-specific directories (`.qwen/`, `.claude/`, `.windsurf/`, etc.) are gitignored and only exist for local development.
 
 ---
 
@@ -217,6 +233,7 @@ rules-quarkus-skills/
 | [Gemini CLI](https://geminicli.com) | Google's AI-powered CLI tool |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | Alibaba's AI coding assistant |
 | [Claude Code](https://claude.ai/code) | Anthropic's AI coding assistant |
+| [skills.sh](https://skills.sh) | AI skills marketplace |
 
 ---
 

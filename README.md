@@ -46,9 +46,17 @@ This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code,
 
 ---
 
-## 🎯 Why This Exists
+## 🎯 About this Skills Ecosystem
 
-This skills collection accelerates development of **rules_quarkus** - a native Bazel integration for Quarkus that solves [Quarkus Issue #11305](https://github.com/quarkusio/quarkus/issues/11305): reconciling Quarkus's build-time augmentation with Bazel's hermetic builds.
+This is not just a collection of rules, but a **Multi-Layered Expert Assistant** for modern enterprise Java development. It bridges the gap between the speed of **Quarkus**, the scalability of **Bazel**, and the robustness of **Modern Java**.
+
+### The Problem We Solve
+[Quarkus Issue #11305](https://github.com/quarkusio/quarkus/issues/11305) identified a fundamental conflict between Quarkus's dynamic build-time "Augmentation" and Bazel's strictly hermetic model. Our ecosystem provides the **deep knowledge** needed to orchestrate this integration across every layer:
+
+1.  **Language Layer:** Native Java 21+ and Virtual Thread expertise.
+2.  **Foundation Layer:** Reactive engine (Vert.x) and Build tool (Maven/Gradle) transition.
+3.  **Infrastructure Layer:** Hermetic Bazel rules and GraalVM Native Image optimization.
+4.  **Application Layer:** High-performance Quarkus development.
 
 **Learn more about the architecture in [docs/skills-relationship.md](docs/skills-relationship.md).**
 

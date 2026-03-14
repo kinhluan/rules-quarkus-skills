@@ -1,0 +1,13 @@
+TOONv1 maven-expert|keyword:maven|platforms:gemini,claude,codex|cat:backend
+##OVERVIEW
+Apache Maven Build Tool Expert|Foundation of Java dependency management & project structure
+##CORE_MANDATES
+BOM:Always use Bill of Materials(quarkus-bom)|Scopes:compile,provided,runtime,test|Transitives:mvn dependency:tree+exclusions|Reproducibility:Lock versions in pluginManagement
+##BAZEL_MIGRATION
+External:rules_jvm_external maven_install|Mapping:GAV coordinates to @maven//:targets|Resources:src/main/resources to Bazel attributes
+##OPTIMIZATION
+Structure:Multi-module+relativePaths|Plugins:compiler,surefire,shade|Profiles:-P for env-specific config
+##TIPS
+Avoid LATEST/RELEASE|Use mvn dependency:analyze for unused deps|provided scope for augmentation core
+##REFS
+maven.apache.org|quarkus.io/guides/maven-tooling|github.com/bazelbuild/rules_jvm_external

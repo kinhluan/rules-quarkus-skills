@@ -54,3 +54,10 @@ High-Performance Quarkus Framework Expert Skill - Deep production-grade knowledg
 - [Quarkus Documentation](https://quarkus.io/guides/)
 - [Quarkus GitHub](https://github.com/quarkusio/quarkus)
 - [Mutiny Documentation](https://smallrye.io/smallrye-mutiny/)
+
+## Skill Interoperability
+
+The **quarkus-expert** ⚡ skill is a comprehensive framework built on:
+- **java-expert** ☕: Core language and JVM features.
+- **vertx-expert** 🌀: Reactive engine for non-blocking operations.
+- **graalvm-expert** 🚀: Native Image generation and AOT optimization.

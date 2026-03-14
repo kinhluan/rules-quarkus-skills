@@ -109,3 +109,11 @@ quarkus_application(
 - [Bazel Support for Quarkus Blog](https://github.com/kinhluan/rules_quarkus/blob/main/docs/blogs/2026-03-11-bazel-support-for-quarkus.md)
 - [Quarkus Documentation](https://quarkus.io/guides/)
 - [Bazel Documentation](https://bazel.build/)
+
+## Skill Interoperability
+
+The **rules-quarkus** 🔧 skill integrates all other skills to provide a complete Quarkus development experience on Bazel:
+- **java-expert** ☕, **vertx-expert** 🌀, **graalvm-expert** 🚀: For framework and runtime support.
+- **maven-expert** 📦, **gradle-expert** 🐘: For migrating existing projects.
+- **bazel-expert** 🏗: For core build system infrastructure.
+- **quarkus-expert** ⚡: For specialized framework knowledge.

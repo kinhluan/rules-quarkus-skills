@@ -32,3 +32,8 @@ General Bazel & Starlark Expert Skill - Expert guidance on writing idiomatic Baz
 - [Bazel Documentation](https://bazel.build/)
 - [Starlark Language Spec](https://github.com/bazelbuild/starlark/blob/master/spec.md)
 - [Bzlmod Documentation](https://bazel.build/external/overview)
+
+## Skill Interoperability
+
+The **bazel-expert** 🏗 skill provides the core build infrastructure for:
+- **rules-quarkus** 🔧: Integrates Quarkus build and augmentation logic into the Bazel ecosystem.

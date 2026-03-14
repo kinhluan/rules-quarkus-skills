@@ -1,0 +1,15 @@
+TOONv1 vertx-expert|keyword:vertx|platforms:gemini,claude,codex|cat:backend
+##OVERVIEW
+Reactive Foundation Expert|Specialized in Eclipse Vert.x event-driven ecosystem
+##CORE_MANDATES
+EventLoop:Don't block!Use executeBlocking()|Polyglot:Event Bus for decoupling|Async:Future,Promise,Handler patterns|Concurrency:Verticle instances/single-threaded model
+##COMPONENTS
+Web:Non-blocking HTTP APIs|EventBus:Distributed messaging/horizontal scaling|Clients:Reactive DB(MySQL,PG,Redis) & Kafka|Context:Thread-local async storage
+##QUARKUS
+ReactiveEngine:Underlying I/O engine|Verticles:Registering/deploying in lifecycle|Mutiny:Uni/Multi over standard Futures
+##ADVANCED
+Patterns:Circuit Breaker,Service Discovery|Clustering:Hazelcast,Infinispan for Event Bus
+##TIPS
+Monitor BlockedThreadChecker|Prefer Vert.x Web Client|Use Vertx.currentContext() for async state
+##REFS
+vertx.io|vertx.io/docs/vertx-web/java|smallrye.io/smallrye-mutiny

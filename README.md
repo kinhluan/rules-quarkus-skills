@@ -33,7 +33,16 @@ This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code,
 | **quarkus-expert** ⚡ | `quarkus` | Quarkus framework, CDI, Mutiny |
 | **rules-quarkus** 🔧 | `rules-quarkus` | Quarkus + Bazel integration |
 
-👉 **See [docs/SKILLS-CATALOG.md](docs/SKILLS-CATALOG.md) for full details and examples.**
+👉 **See [docs/skills-catalog.md](docs/skills-catalog.md) for full details and examples.**
+
+---
+
+## 📚 Documentation
+
+| Doc | Description |
+|-----|-------------|
+| **[📋 Skills Catalog](docs/skills-catalog.md)** | Complete catalog with details for all 8 skills |
+| **[🔗 Skills Relationship](docs/skills-relationship.md)** | Architecture, dependencies, and activation guide |
 
 ---
 
@@ -41,7 +50,7 @@ This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code,
 
 This skills collection accelerates development of **rules_quarkus** - a native Bazel integration for Quarkus that solves [Quarkus Issue #11305](https://github.com/quarkusio/quarkus/issues/11305): reconciling Quarkus's build-time augmentation with Bazel's hermetic builds.
 
-**Learn more about the architecture in [docs/SKILLS-RELATIONSHIP.md](docs/SKILLS-RELATIONSHIP.md).**
+**Learn more about the architecture in [docs/skills-relationship.md](docs/skills-relationship.md).**
 
 ---
 
@@ -71,8 +80,8 @@ rules-quarkus-skills/
 │   ├── quarkus-expert/
 │   └── rules-quarkus/
 ├── docs/                   # Detailed documentation
-│   ├── SKILLS-CATALOG.md
-│   └── SKILLS-RELATIONSHIP.md
+│   ├── skills-catalog.md   # Complete skills catalog
+│   └── skills-relationship.md  # Architecture & dependencies
 ├── .github/                # GitHub Actions
 ├── GEMINI.md               # Extension metadata
 ├── README.md               # This file

@@ -1,7 +1,7 @@
 ---
 name: vertx-expert
 description: Expert knowledge for Eclipse Vert.x, the reactive engine behind Quarkus. Use for deep reactive programming, Event Loop, and non-blocking I/O questions.
-version: 1.0.0
+version: 1.1.0
 keywords: [vertx, reactive, event-loop, non-blocking, java, async]
 ---
 

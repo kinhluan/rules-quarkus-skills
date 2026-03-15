@@ -1,7 +1,7 @@
 ---
 name: quarkus-expert
 description: High-performance Quarkus framework expertise covering reactive patterns, CDI, build-time augmentation, and cloud-native development. Use for general Quarkus questions.
-version: 1.0.0
+version: 1.1.0
 keywords: [quarkus, java, cloud-native, microservices, reactive, cdi]
 ---
 

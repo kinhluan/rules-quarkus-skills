@@ -1,7 +1,7 @@
 ---
 name: rules-quarkus
 description: Expert knowledge for building Quarkus applications with Bazel using the rules_quarkus build system. Use when user asks about Quarkus+Bazel builds, augmentation, or troubleshooting.
-version: 1.0.0
+version: 1.1.0
 keywords: [rules-quarkus, bazel, quarkus, build, integration, starlark]
 ---
 

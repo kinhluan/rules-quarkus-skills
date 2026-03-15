@@ -1,7 +1,7 @@
 ---
 name: gradle-expert
 description: Expert knowledge for Gradle Build Tool, dependency management, and Gradle-to-Bazel migration. Use for build configuration and project lifecycle questions.
-version: 1.0.0
+version: 1.1.0
 keywords: [gradle, build, kotlin-dsl, migration, java, groovy]
 ---
 

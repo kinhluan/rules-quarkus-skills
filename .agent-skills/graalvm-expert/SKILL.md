@@ -1,7 +1,7 @@
 ---
 name: graalvm-expert
 description: Expert knowledge for GraalVM, Native Image (AOT), Polyglot runtime, and reflection/resource configuration. Use for native compilation and multi-language JVM questions.
-version: 1.0.0
+version: 1.1.0
 keywords: [graalvm, native-image, aot, polyglot, optimization, jvm]
 ---
 

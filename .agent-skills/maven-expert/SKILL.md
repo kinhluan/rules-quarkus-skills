@@ -1,7 +1,7 @@
 ---
 name: maven-expert
 description: Expert knowledge for Apache Maven, dependency management, BOMs, and Maven-to-Bazel migration. Use for build configuration and project lifecycle questions.
-version: 1.0.0
+version: 1.1.0
 keywords: [maven, build, dependency-management, migration, java, xml]
 ---
 

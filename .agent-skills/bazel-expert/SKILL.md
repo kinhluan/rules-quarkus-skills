@@ -1,6 +1,8 @@
 ---
 name: bazel-expert
 description: Expert knowledge for writing idiomatic Bazel rules, Starlark best practices, and build performance optimization. Use for Bazel build system questions.
+version: 1.0.0
+keywords: [bazel, starlark, monorepo, build-system, hermetic, build]
 ---
 
 # bazel-expert

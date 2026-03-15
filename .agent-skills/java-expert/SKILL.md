@@ -1,6 +1,8 @@
 ---
 name: java-expert
 description: Expert knowledge for Modern Java (21+) development, including Virtual Threads, performance tuning, and idiomatic clean code. Use for deep Java language/logic questions.
+version: 1.0.0
+keywords: [java, jdk21, virtual-threads, performance, jvm, backend]
 ---
 
 # java-expert

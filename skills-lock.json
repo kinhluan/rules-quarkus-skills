@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "skills": {
+    "bazel-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "cc9dca16d61ec2c9dc35f01931d9806e57cebddf7718144cf0b1b760e5aaf1c3"
+    },
+    "graalvm-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "0d35ec6cd38212efa0cadfd1a6c3dfd8efb4c7b2ae79139b1dfb12f39dbb2a27"
+    },
+    "gradle-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "c3e75af81c6a74c5b46d448ab1a716426a6c89572b4d16b53c6d9df0f1cb20e8"
+    },
+    "java-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "6edf47e816e3f9b617b24c5b721005491575f2d066dd132f3e5ce58aeb2ddff4"
+    },
+    "maven-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "8e0d92dbbae1031efaec5208ff640fd32cffd2e3024fa221fcc80dc04784c09a"
+    },
+    "quarkus-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "6bd93b01615f3868a5c7bbad45a3ffa8950694a9839f4a59e728c015384f3fd2"
+    },
+    "rules-quarkus": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "f877546cbfa2d6ad215232b86f9ff3d1af6f2e02c31a987c3567c151db7a3a56"
+    },
+    "vertx-expert": {
+      "source": "kinhluan/rules-quarkus-skills",
+      "sourceType": "github",
+      "computedHash": "e3da7934eb5a158e083b59628fd0b14c7a62f93244781271ca164dad250a14c1"
+    }
+  }
+}

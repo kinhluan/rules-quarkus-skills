@@ -45,9 +45,9 @@ High-Performance Polyglot & Native VM Expert Skill - Specialized in GraalVM AOT 
 
 ## References
 
-- [GraalVM Documentation](https://www.graalvm.org/docs/)
-- [Native Image Reference Guide](https://www.graalvm.org/reference-manual/native-image/)
-- [Quarkus Native Guide](https://quarkus.io/guides/native-and-native-image)
+- [GraalVM Documentation](https://www.graalvm.org/latest/docs/)
+- [Native Image Reference Guide](https://www.graalvm.org/latest/reference-manual/native-image/)
+- [Quarkus Native Guide](https://quarkus.io/guides/building-native-image)
 
 ## Skill Interoperability
 

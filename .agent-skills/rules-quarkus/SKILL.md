@@ -219,15 +219,15 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 
 QUARKUS_VERSION = "3.20.1"
 
-# Runtime artifacts - simple declaration
+# Runtime artifacts + core deployment (no exclusions needed for core/arc)
 maven.install(
     name = "maven",
     artifacts = [
-        # Quarkus Core
+        # Quarkus Core (core-deployment does NOT pull Maven/Sisu transitives)
         "io.quarkus:quarkus-core:%s" % QUARKUS_VERSION,
         "io.quarkus:quarkus-core-deployment:%s" % QUARKUS_VERSION,
 
-        # Quarkus ArC (CDI)
+        # Quarkus ArC / CDI (arc-deployment does NOT pull Maven/Sisu transitives)
         "io.quarkus:quarkus-arc:%s" % QUARKUS_VERSION,
         "io.quarkus:quarkus-arc-deployment:%s" % QUARKUS_VERSION,
 
@@ -237,7 +237,7 @@ maven.install(
         "io.quarkus:quarkus-bootstrap-runner:%s" % QUARKUS_VERSION,
         "io.quarkus:quarkus-builder:%s" % QUARKUS_VERSION,
 
-        # Quarkus REST
+        # Quarkus REST (runtime only - deployment needs exclusions, see below)
         "io.quarkus:quarkus-rest:%s" % QUARKUS_VERSION,
         "io.quarkus:quarkus-vertx-http:%s" % QUARKUS_VERSION,
 
@@ -267,8 +267,10 @@ maven.install(
 )
 
 # ============================================================
-# CRITICAL: Deployment extensions MUST have exclusions
-# to avoid circular dependencies with Maven/Sisu internals
+# Deployment extensions that pull Maven/Sisu transitives
+# MUST use maven.artifact() with exclusions.
+# Note: quarkus-core-deployment and quarkus-arc-deployment
+# do NOT have these transitives, so they can stay in artifacts[].
 # ============================================================
 maven.artifact(
     artifact = "quarkus-rest-deployment",
@@ -450,7 +452,7 @@ bazel query @maven//:all | grep quarkus
 
 ### Adding a New Quarkus Extension
 
-Every Quarkus extension has **two** Maven artifacts: runtime + deployment. Deployment artifacts need **exclusions**.
+Every Quarkus extension has **two** Maven artifacts: runtime + deployment. Most deployment artifacts need **exclusions** (see "Deployment Exclusions" section for which ones).
 
 ```
 User says: "Add Hibernate ORM with Panache"
@@ -504,7 +506,7 @@ Step 5: Rebuild
 
 ### Critical: Deployment Exclusions
 
-**Why are exclusions needed?** Quarkus deployment JARs transitively pull in Maven/Sisu internals (because Quarkus's build tooling was designed for Maven). These create circular dependency errors in Bazel. The standard exclusion set is:
+**Why are exclusions needed?** Some Quarkus deployment JARs transitively pull in Maven/Sisu internals (because Quarkus's build tooling was designed for Maven). These create circular dependency errors in Bazel. The standard exclusion set is:
 
 ```python
 DEPLOYMENT_EXCLUSIONS = [
@@ -515,7 +517,17 @@ DEPLOYMENT_EXCLUSIONS = [
 ]
 ```
 
-**Every deployment artifact** should use `maven.artifact()` with these exclusions instead of being listed in `maven.install() artifacts`.
+**Which deployment artifacts need exclusions?**
+
+| Artifact | Needs exclusions? | Why |
+|----------|-------------------|-----|
+| `quarkus-core-deployment` | No | Core module, no Maven/Sisu transitives |
+| `quarkus-arc-deployment` | No | CDI processor, no Maven/Sisu transitives |
+| `quarkus-rest-deployment` | **Yes** | Pulls org.eclipse.sisu via build tooling |
+| `quarkus-vertx-http-deployment` | **Yes** | Pulls org.eclipse.sisu via build tooling |
+| Most other `*-deployment` | **Yes** | Assume yes unless verified in repo MODULE.bazel |
+
+**Rule of thumb:** If unsure, use `maven.artifact()` with exclusions. If it works without, you can simplify later. When in doubt, **read the repo MODULE.bazel** for the exact tested configuration.
 
 ### Understanding `deps` vs `runtime_extensions` vs `deployment_extensions`
 

@@ -87,7 +87,10 @@ private static final ThreadLocal<ExpensiveCache> cache = ThreadLocal.withInitial
 
 // GOOD - use ScopedValue (Preview) or shared concurrent structure
 private static final ScopedValue<RequestContext> CONTEXT = ScopedValue.newInstance();
-ScopedValue.runWhere(CONTEXT, ctx, () -> handleRequest());
+
+void handleIncoming(RequestContext ctx) {
+    ScopedValue.runWhere(CONTEXT, ctx, () -> handleRequest());
+}
 
 // BAD - pooling virtual threads (defeats the purpose)
 ExecutorService pool = Executors.newFixedThreadPool(100);  // Platform threads only!

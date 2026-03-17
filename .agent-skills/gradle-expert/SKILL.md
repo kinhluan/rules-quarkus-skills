@@ -370,9 +370,9 @@ tasks.register("listDeps") {
 
 - [Gradle Documentation](https://docs.gradle.org/current/userguide/userguide.html)
 - [Quarkus Gradle Guide](https://quarkus.io/guides/gradle-tooling)
-- [Gradle-to-Bazel Migration Blog](https://blog.bazel.build/2019/07/01/gradle-to-bazel.html)
 - [Version Catalogs](https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog)
 - [Dependency Management](https://docs.gradle.org/current/userguide/dependency_management.html)
+- [Bazel JVM Dependencies](https://github.com/bazelbuild/rules_jvm_external)
 
 ## Skill Interoperability
 

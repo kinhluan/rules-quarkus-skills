@@ -331,8 +331,8 @@ Workload type?
 ## References
 
 - [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
-- [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java/9780134686097/)
-- [Java Flight Recorder (JFR) Guide](https://docs.oracle.com/en/java/javase/21/jfr/java-flight-recorder.html)
+- [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java-3rd-edition/9780134686097/)
+- [Java Flight Recorder (JFR) Guide](https://docs.oracle.com/en/java/javase/21/jdkapi/java-flight-recorder.html)
 - [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
 - [Virtual Threads JEP 444](https://openjdk.org/jeps/444)
 

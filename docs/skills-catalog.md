@@ -166,7 +166,7 @@
 - Improving legacy code or technical debt
 - Applying architectural patterns
 - Code reviews and quality audits
-- Simplifiying complex logic
+- Simplifying complex logic
 
 **Example:**
 ```
@@ -373,7 +373,7 @@
 
 ### rules-quarkus 🔧
 
-**Keyword:** `rules-quarkus` | **Layer:** Integration | **Dependencies:** All 7 skills above
+**Keyword:** `rules-quarkus` | **Layer:** Integration | **Dependencies:** All foundational skills above
 
 <details>
 <summary><strong>Click to expand details</strong></summary>

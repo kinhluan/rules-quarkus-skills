@@ -95,7 +95,7 @@ These skills combine multiple layers for specific use cases:
 
 | Skill | Depends On | Description |
 |-------|------------|-------------|
-| **rules-quarkus** 🔧 | **All 7 skills above** | Quarkus + Bazel integration, migration from Maven/Gradle |
+| **rules-quarkus** 🔧 | **All foundational skills above** | Quarkus + Bazel integration, migration from Maven/Gradle |
 
 ---
 

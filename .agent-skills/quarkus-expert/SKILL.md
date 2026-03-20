@@ -51,11 +51,21 @@ High-Performance Quarkus Framework Expert Skill - Deep production-grade knowledg
 - **ContextNotActiveException:** Ensure CDI contexts propagate correctly with Mutiny
 - **Native Image Failures:** Analyze reports and provide `reflection-config.json`
 
+## 🌐 Knowledge Sources & Deep Dives
+
+> **Directive:** Use `web_fetch` to read specific guides if the user's question involves a particular extension (e.g., Hibernate, Kafka, OIDC).
+
+- **Mutiny Mastery:** [SmallRye Mutiny Documentation](https://smallrye.io/smallrye-mutiny/latest/guides/) - Core reactive patterns.
+- **Persistence Guide:** [Hibernate ORM with Panache](https://quarkus.io/guides/hibernate-orm-panache) - Data access patterns.
+- **Messaging:** [Apache Kafka with Quarkus](https://quarkus.io/guides/kafka) - Event-driven architecture.
+- **CDI/Arc:** [Contexts and Dependency Injection in Quarkus](https://quarkus.io/guides/cdi-reference) - Bean lifecycle and injection.
+- **Virtual Threads:** [Quarkus and Virtual Threads](https://quarkus.io/guides/virtual-threads) - Blocking I/O optimization.
+
 ## References
 
-- [Quarkus Documentation](https://quarkus.io/guides/)
-- [Quarkus GitHub](https://github.com/quarkusio/quarkus)
-- [Mutiny Documentation](https://smallrye.io/smallrye-mutiny/)
+- [Quarkus Official Documentation](https://quarkus.io/guides/)
+- [Quarkus GitHub Repository](https://github.com/quarkusio/quarkus)
+- [Mutiny Javadoc](https://smallrye.io/smallrye-mutiny/latest/apidocs/)
 
 ## Skill Interoperability
 

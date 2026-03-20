@@ -6,7 +6,7 @@
 
 > **Expert AI skills for Modern Java development with Quarkus and Bazel**
 >
-> 8 comprehensive skills covering Java, Quarkus, Bazel, Vert.x, GraalVM, and migration from Maven/Gradle.
+> 12 comprehensive skills covering Java, Quarkus, Bazel, and Google Engineering Practices.
 
 ---
 
@@ -16,7 +16,7 @@
 npx skills add kinhluan/rules-quarkus-skills
 ```
 
-This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code, Cursor, etc.).
+This installs all 12 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code, Cursor, etc.).
 
 ---
 
@@ -28,9 +28,13 @@ This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code,
 | **maven-expert** 📦 | `maven` | Dependency management, BOMs, migration |
 | **gradle-expert** 🐘 | `gradle` | Build DSL, optimization, migration |
 | **bazel-expert** 🏗 | `bazel` | Starlark rules, hermetic builds |
+| **refactoring-expert** 🛠 | `refactoring` | Clean Code, Design Patterns (Guru) |
+| **code-author** ✍️ | `author` | Google PR authoring, Small CLs |
+| **code-reviewer** 🔍 | `reviewer` | Google code review, LGTM standards |
 | **vertx-expert** 🌀 | `vertx` | Reactive programming, Event Loop |
 | **graalvm-expert** 🚀 | `graalvm` | Native Image AOT, polyglot |
 | **quarkus-expert** ⚡ | `quarkus` | Quarkus framework, CDI, Mutiny |
+| **quarkus-debug** 🔍 | `quarkus-debug` | Deep troubleshooting, Mutiny, Native diagnostics |
 | **rules-quarkus** 🔧 | `rules-quarkus` | Quarkus + Bazel integration |
 
 👉 **See [docs/skills-catalog.md](docs/skills-catalog.md) for full details and examples.**
@@ -41,7 +45,7 @@ This installs all 8 skills to your AI agent (Gemini CLI, Qwen Code, Claude Code,
 
 | Doc | Description |
 |-----|-------------|
-| **[📋 Skills Catalog](docs/skills-catalog.md)** | Complete catalog with details for all 8 skills |
+| **[📋 Skills Catalog](docs/skills-catalog.md)** | Complete catalog with details for all 9 skills |
 | **[🔗 Skills Relationship](docs/skills-relationship.md)** | Architecture, dependencies, and activation guide |
 
 ---
@@ -65,7 +69,11 @@ This is not just a collection of rules, but a **Multi-Layered Expert Assistant**
 ## 💡 Usage Examples
 
 ```
+@author Draft a clear CL description for this bug fix
+@reviewer Review this PR for logic errors and maintainability
+@refactoring What code smells do you see in this class?
 @rules-quarkus CDIProvider error during augmentation
+@quarkus-debug Why is my Mutiny context not propagating?
 @quarkus When to use Virtual Threads vs Mutiny?
 @bazel Optimize this Starlark rule for remote execution
 @graalvm Reflection error in native build

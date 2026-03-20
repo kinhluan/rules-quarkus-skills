@@ -1,0 +1,29 @@
+TOONv1 refactoring-expert|keyword:refactoring|platforms:gemini,claude,codex|cat:clean-code
+##MANDATES
+TestFirst:Mandatory tests|Behavior preservation
+Atomic:One change at a time|No mixed commits
+Metrics:Max 20 lines|Max 3 params|Max 2 nesting levels
+Complexity:Simplify arrow code
+BoyScout:leave code cleaner
+##SMELLS
+Bloaters:Large classes/methods|Primitive obsession
+OO-Abusers:Switch-to-Strategy|Refused bequest
+ChangePreventers:Divergent change|Shotgun surgery
+Dispensables:Dead code|Duplicate code
+##TECHNIQUES
+Composing:ExtractMethod|InlineMethod|ReplaceTempWithQuery
+Moving:MoveMethod|MoveField|ExtractClass|HideDelegate
+Data:MagicNumbers-to-Constants|EncapsulateField
+Conditional:GuardClauses|DecomposeConditional
+##PATTERNS
+Creational:Factory|Builder|Singleton|AbstractFactory
+Structural:Adapter|Composite|Decorator|Facade|Proxy
+Behavioral:Command|Observer|Strategy|State|Visitor
+##WORKFLOWS
+Understand:Document IO/Invariants -> Verify tests
+Execute:Transform -> Check metrics (20/3/2) -> Verify shell
+SummaryTemplate:Pattern applied|Smell removed|Metrics improved|Verification
+##REFERENCES
+refactoring.guru|supercent-io-skills-template|google-java-style
+##INTEROP
+java-expert|quarkus-expert|rules-quarkus

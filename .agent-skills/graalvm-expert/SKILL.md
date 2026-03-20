@@ -43,11 +43,20 @@ High-Performance Polyglot & Native VM Expert Skill - Specialized in GraalVM AOT 
 - Prefer `quarkus.native.additional-build-args` for passing low-level GraalVM flags.
 - Use `--trace-class-initialization` to debug complex initialization order issues.
 
+## 🌐 GraalVM Deep Dives
+
+> **Directive:** Use `web_fetch` to find specific configuration flags or reflection-config.json syntax if a native build fails or requires optimization.
+
+- **Native Image Agent:** [GraalVM Agent Guide](https://www.graalvm.org/latest/reference-manual/native-image/metadata/AutomaticMetadataCollection/) - Automating metadata collection.
+- **Reflection Config:** [Reflection Config Reference](https://www.graalvm.org/latest/reference-manual/native-image/metadata/#reflection) - Manual reflection configuration.
+- **Dynamic Proxy:** [Dynamic Proxy metadata](https://www.graalvm.org/latest/reference-manual/native-image/metadata/#dynamic-proxy) - Handling interface-based proxies.
+- **Static vs Runtime Init:** [Class Initialization in Native Image](https://www.graalvm.org/latest/reference-manual/native-image/optimizations/ClassInitialization/) - Debugging --initialize-at-build-time.
+
 ## References
 
-- [GraalVM Documentation](https://www.graalvm.org/latest/docs/)
-- [Native Image Reference Guide](https://www.graalvm.org/latest/reference-manual/native-image/)
-- [Quarkus Native Guide](https://quarkus.io/guides/building-native-image)
+- [GraalVM Native Image Documentation](https://www.graalvm.org/latest/reference-manual/native-image/)
+- [Quarkus Native Image Guide](https://quarkus.io/guides/building-native-image)
+- [GraalVM GitHub Repository](https://github.com/oracle/graal)
 
 ## Skill Interoperability
 

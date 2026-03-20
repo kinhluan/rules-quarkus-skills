@@ -1,0 +1,21 @@
+TOONv1 code-author|keyword:author|platforms:gemini,claude,codex|cat:engineering
+##MANDATES
+SmallCLs:single focused change
+ClearDesc:What + Why
+RiskIdentification:call out high-risk areas
+SelfAudit:diff minimization|docs|test alignment
+NoMix:separate refactor from feature
+##WORKFLOWS
+Plan:Isolate task -> Identify risks -> Draft description
+Write:Tests first -> Style guide -> Self-Audit
+Feedback:Be grateful -> Professional reasoning -> Resolve/Disagree
+##TEMPLATE
+Summary:One line summary
+Context:Why and What
+KeyChanges:Bullet points
+Risks:Where to focus
+Verification:How it was tested
+##REFERENCES
+google-eng-practices/developer|small-cls|cl-descriptions|handling-feedback
+##INTEROP
+java-expert|quarkus-expert|refactoring-expert

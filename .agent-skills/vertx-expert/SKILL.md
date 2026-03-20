@@ -43,11 +43,20 @@ Reactive Foundation Expert Skill - Specialized in the Eclipse Vert.x event-drive
 - Prefer `Vert.x Web Client` over legacy `RestTemplate` or blocking clients.
 - Use `Vertx.currentContext()` for low-level async state management.
 
+## 🌐 Reactive Knowledge Sources
+
+> **Directive:** If you encounter blocked thread warnings or need to implement complex event-driven flows, use `web_fetch` on these official guides.
+
+- **Don't Block!:** [Blocking Code in Vert.x Guide](https://vertx.io/docs/guide-for-java-devs/#_blocking_code) - Essential reading for performance.
+- **Event Bus Patterns:** [Vert.x Distributed Event Bus](https://vertx.io/docs/vertx-core/java/#_the_event_bus) - Messaging and scaling.
+- **Reactive SQL:** [Vert.x Reactive SQL Clients](https://vertx.io/docs/vertx-mysql-client/java/) - Non-blocking database access.
+- **Vert.x + Mutiny:** [SmallRye Mutiny for Vert.x](https://smallrye.io/smallrye-mutiny/latest/guides/vertx/) - Reactive patterns for Quarkus.
+
 ## References
 
-- [Eclipse Vert.x Website](https://vertx.io/)
+- [Eclipse Vert.x Official Website](https://vertx.io/)
 - [Vert.x Web Documentation](https://vertx.io/docs/vertx-web/java/)
-- [Mutiny and Vert.x](https://smallrye.io/smallrye-mutiny/)
+- [SmallRye Mutiny Documentation](https://smallrye.io/smallrye-mutiny/)
 
 ## Skill Interoperability
 

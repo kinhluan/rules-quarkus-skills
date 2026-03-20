@@ -13,6 +13,7 @@ High-Performance Modern Java Expert Skill - Specialized in Java 21+ and cloud-na
 
 ## Core Mandates
 
+- **Google Java Style:** Strictly adhere to the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) for formatting, naming, and structure.
 - **Java 21+ First:** Mandate `var` (LVTI) where readable, Records for DTOs, and Pattern Matching for `instanceof` and `switch`.
 - **Concurrency:** Prefer Virtual Threads (`@RunOnVirtualThread` in Quarkus or `Executors.newVirtualThreadPerTaskExecutor()`) over traditional Thread Pools for I/O-bound tasks.
 - **Immutability:** Use `record`, `final` fields, and `unmodifiable` collections (`List.of`, `Map.of`).
@@ -331,13 +332,23 @@ Workload type?
 - Use `List.copyOf()` / `Map.copyOf()` to defensively copy mutable collections in public APIs.
 - Prefer `Optional.orElseThrow()` over `Optional.get()` (never call `.get()` without `.isPresent()`).
 
+## 🌐 Java Knowledge Sources
+
+> **Directive:** Use `web_fetch` to find the latest JDK 21+ features, JEP details, or performance tuning flags (G1GC, ZGC) before giving architecture advice.
+
+- **JDK 21 Release Notes:** [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/relnotes/) - Breaking changes and new APIs.
+- **Coding Standards:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) - Formatting, naming, and whitespace conventions.
+- **Virtual Threads (Project Loom):** [JEP 444](https://openjdk.org/jeps/444) - Comprehensive guide to Virtual Threads.
+- **Modern Concurrency:** [Structured Concurrency (JEP 453)](https://openjdk.org/jeps/453) - Managing subtasks.
+- **Performance Tuning:** [HotSpot Virtual Machine Garbage Collection](https://docs.oracle.com/en/java/javase/21/gctuning/) - Tuning G1 and ZGC.
+
 ## References
 
-- [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
+- [Official Java SE Documentation](https://docs.oracle.com/en/java/javase/21/)
+- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java-3rd-edition/9780134686097/)
-- [Java Flight Recorder (JFR) Guide](https://docs.oracle.com/en/java/javase/21/jdkapi/java-flight-recorder.html)
+- [Java Flight Recorder (JFR) Reference](https://docs.oracle.com/en/java/javase/21/jdkapi/java-flight-recorder.html)
 - [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
-- [Virtual Threads JEP 444](https://openjdk.org/jeps/444)
 
 ## Skill Interoperability
 

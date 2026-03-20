@@ -355,12 +355,20 @@ mvn install -o
 - Use `mvn versions:display-dependency-updates` to check for outdated dependencies.
 - Always use `<dependencyManagement>` in parent POM, never hardcode versions in child modules.
 
+## 🌐 Maven Knowledge Sources
+
+> **Directive:** Use `web_fetch` to analyze complex POM structures, dependency conflict resolution strategies, or Maven-to-Bazel migration patterns.
+
+- **Maven Dependency Mechanism:** [Introduction to Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) - Nearest-first, scope, and mediation.
+- **BOM Import Guide:** [Introduction to the Bill of Materials](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies) - Managing versions centrally.
+- **Maven-to-Bazel Migration:** [Migrating from Maven to Bazel](https://bazel.build/migrate/maven) - Strategy and tools.
+- **Quarkus Maven Tooling:** [Quarkus Maven Guide](https://quarkus.io/guides/maven-tooling) - Extension management and dev mode.
+
 ## References
 
-- [Apache Maven Documentation](https://maven.apache.org/guides/index.html)
-- [Quarkus Maven Guide](https://quarkus.io/guides/maven-tooling)
+- [Apache Maven Official Documentation](https://maven.apache.org/guides/index.html)
 - [rules_jvm_external (Bazel Maven support)](https://github.com/bazelbuild/rules_jvm_external)
-- [Maven Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
+- [Quarkus Official Guides](https://quarkus.io/guides/)
 
 ## Skill Interoperability
 

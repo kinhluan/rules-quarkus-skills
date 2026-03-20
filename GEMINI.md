@@ -71,7 +71,45 @@
 - Reactive programming with Mutiny
 - Extension development and Dev Services
 
-### 8. bazel-expert
+### 8. quarkus-debug
+**Keyword:** `quarkus-debug`
+**Description:** Advanced troubleshooting and deep debugging for Quarkus
+
+**When to activate:**
+- Debugging reactive/asynchronous code and Mutiny
+- Native Image (AOT) troubleshooting and GDB/LLDB
+- Investigating build-time augmentation failures
+- Fixing ClassLoader and memory leak issues
+
+### 9. refactoring-expert
+**Keyword:** `refactoring`  
+**Description:** Expert knowledge for Clean Code, Refactoring, and Design Patterns based on Refactoring Guru
+
+**When to activate:**
+- Code reviews and quality audits
+- Applying Design Patterns (Creational, Structural, Behavioral)
+- Identifying and fixing Code Smells
+- Improving legacy code maintainability
+
+### 10. code-author
+**Keyword:** `author`
+**Description:** Professional code change authoring following Google's Engineering Practices
+
+**When to activate:**
+- Drafting PR/CL descriptions
+- Organizing changes into small, reviewable units
+- Responding to code review feedback
+
+### 11. code-reviewer
+**Keyword:** `reviewer`
+**Description:** High-quality code review following Google's Engineering Practices
+
+**When to activate:**
+- Conducting code reviews
+- Providing constructive, mentoring-focused feedback
+- Assessing if a change is ready for LGTM
+
+### 12. bazel-expert
 **Keyword:** `bazel`  
 **Description:** Bazel rules and Starlark best practices
 
@@ -118,6 +156,10 @@ activate_skill .agent-skills/rules-quarkus
 ├── graalvm-expert/    # Native & Polyglot
 ├── rules-quarkus/     # Quarkus + Bazel
 ├── quarkus-expert/    # Quarkus Framework
+├── quarkus-debug/     # Quarkus Deep Troubleshooting
+├── refactoring-expert/# Refactoring & Design Patterns
+├── code-author/       # Google-style PR Authoring
+├── code-reviewer/     # Google-style Code Review
 └── bazel-expert/      # Bazel Build System
 ```
 

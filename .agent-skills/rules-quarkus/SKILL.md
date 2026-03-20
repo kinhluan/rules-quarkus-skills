@@ -756,12 +756,26 @@ App starts but DB connection fails?
 - Use `bazel query "deps(//app)"` to debug the full dependency graph
 - When in doubt, **read the MODULE.bazel from the repo** - it has all tested artifact combinations
 
+## 🌐 Knowledge Sources & Deep Dives
+
+> **Directive:** When encountering unlisted extensions or complex build errors, use `web_fetch` on the relevant GitHub file or search the Issue tracker before guessing.
+
+### Core Repository (Source of Truth)
+- **Macro Signatures:** [quarkus/quarkus.bzl](https://raw.githubusercontent.com/kinhluan/rules_quarkus/main/quarkus/quarkus.bzl) - Check attributes and defaults.
+- **Augmentation Pipeline:** [quarkus/quarkus_bootstrap.bzl](https://raw.githubusercontent.com/kinhluan/rules_quarkus/main/quarkus/quarkus_bootstrap.bzl) - How JARs are collected and augmented.
+- **Dependency Map:** [MODULE.bazel](https://raw.githubusercontent.com/kinhluan/rules_quarkus/main/MODULE.bazel) - See tested artifacts and required `exclusions`.
+
+### Troubleshooting & Community
+- **GitHub Issues:** [kinhluan/rules_quarkus/issues](https://github.com/kinhluan/rules_quarkus/issues) - Search for "extension-name" or "error-message".
+- **Changelog:** [CHANGELOG.md](https://github.com/kinhluan/rules_quarkus/blob/main/CHANGELOG.md) - Track breaking changes between versions.
+- **Reference Issue:** [Quarkus Issue #11305](https://github.com/quarkusio/quarkus/issues/11305) - Context on Bazel + Quarkus challenges.
+
 ## References
 
-- [rules_quarkus GitHub](https://github.com/kinhluan/rules_quarkus)
+- [rules_quarkus Documentation](https://github.com/kinhluan/rules_quarkus#readme)
 - [Bazel Support for Quarkus Blog](https://github.com/kinhluan/rules_quarkus/blob/main/docs/blogs/2026-03-11-bazel-support-for-quarkus.md)
-- [Quarkus Documentation](https://quarkus.io/guides/)
-- [Bazel Documentation](https://bazel.build/)
+- [Quarkus Official Guides](https://quarkus.io/guides/)
+- [Bazel Build System](https://bazel.build/)
 
 ## Skill Interoperability
 

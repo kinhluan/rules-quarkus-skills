@@ -285,13 +285,21 @@ Does it need to integrate with Java toolchain?
   NO → genrule may suffice
 ```
 
+## 🌐 Bazel Knowledge Sources
+
+> **Directive:** Use `web_fetch` to find the latest macro signatures or Bzlmod extensions if a build fails with toolchain or dependency errors.
+
+- **Bzlmod Migration:** [Bazel External Dependencies Guide](https://bazel.build/external/overview) - Managing the new MODULE.bazel system.
+- **Starlark Rule Writing:** [Rules (Bazel)](https://bazel.build/extending/rules) - Providers, Actions, and toolchains.
+- **Build Performance:** [Optimizing Bazel Builds](https://bazel.build/run/performance) - Profiling and caching.
+- **Remote Execution:** [Remote Execution Overview](https://bazel.build/remote/rbe) - Scaling builds.
+
 ## References
 
-- [Bazel Documentation](https://bazel.build/)
-- [Starlark Language Spec](https://github.com/bazelbuild/starlark/blob/master/spec.md)
-- [Bzlmod Documentation](https://bazel.build/external/overview)
-- [rules_java](https://github.com/bazelbuild/rules_java)
-- [rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external)
+- [Official Bazel Documentation](https://bazel.build/)
+- [rules_java GitHub Repository](https://github.com/bazelbuild/rules_java)
+- [rules_jvm_external Documentation](https://github.com/bazelbuild/rules_jvm_external)
+- [Starlark Language Specification](https://github.com/bazelbuild/starlark/blob/master/spec.md)
 
 ## Skill Interoperability
 

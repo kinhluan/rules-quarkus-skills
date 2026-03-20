@@ -1,0 +1,20 @@
+TOONv1 quarkus-debug|keyword:quarkus-debug|platforms:gemini,claude,codex|cat:troubleshooting
+##MANDATES
+DevModeFirst:quarkus:dev|live-reload
+ContextAware:Imperative vs Reactive(Event Loop)
+BinaryParity:JVM vs Native parity
+AugmentationInsight:Build-time(deployment) vs Run-time
+No-Block:never block event loop
+##DOMAINS
+DevMode:JPDA:5005|DevUI:/q/dev|Arc inspection|ContinuousTesting
+Reactive:Mutiny stacktraces|ContextPropagation:DuplicatedContext|EventLoopBlocking warnings
+NativeAOT:Reflection/Resources/Proxy configs|GraalVM Agent|GDB/LLDB debuginfo|Static-vs-Runtime init
+Augmentation:BuildStep failure|Deployment vs Runtime|Bytecode inspection|rules_quarkus:sandbox_debug
+##WORKFLOWS
+ClassLoader:parent-first-artifacts|ClassCastException
+DevServices:docker logs|pinned ports
+MemoryLeaks:hot reload OOM|JFR(Java Flight Recorder) profiling
+##REFERENCES
+quarkus.io/guides/debugging|smallrye.io/smallrye-mutiny|graalvm.org/native-image/debugging
+##INTEROP
+java-expert|quarkus-expert|vertx-expert|graalvm-expert|rules-quarkus

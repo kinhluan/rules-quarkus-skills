@@ -366,13 +366,22 @@ tasks.register("listDeps") {
 - Always use `tasks.register` (lazy) over `tasks.create` (eager) for Task Configuration Avoidance.
 - Use `./gradlew build --dry-run` to preview task execution order without running anything.
 
+## 🌐 Gradle Knowledge Sources
+
+> **Directive:** Use `web_fetch` to find Kotlin DSL syntax, version catalog patterns, or Gradle-to-Bazel migration strategies if a build configuration is complex.
+
+- **Gradle Kotlin DSL Primer:** [Kotlin DSL Guide](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - Type-safe build scripts.
+- **Dependency Management:** [Managing Dependencies](https://docs.gradle.org/current/userguide/dependency_management.html) - Configurations, platforms, and catalogs.
+- **Gradle-to-Bazel Migration:** [Migrating from Gradle to Bazel](https://bazel.build/migrate/gradle) - Step-by-step transition.
+- **Build Performance:** [Optimizing Gradle Builds](https://docs.gradle.org/current/userguide/performance.html) - Cache, daemon, and parallel execution.
+- **Quarkus Gradle Tooling:** [Quarkus Gradle Guide](https://quarkus.io/guides/gradle-tooling) - Plugin configuration.
+
 ## References
 
-- [Gradle Documentation](https://docs.gradle.org/current/userguide/userguide.html)
-- [Quarkus Gradle Guide](https://quarkus.io/guides/gradle-tooling)
-- [Version Catalogs](https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog)
-- [Dependency Management](https://docs.gradle.org/current/userguide/dependency_management.html)
-- [Bazel JVM Dependencies](https://github.com/bazelbuild/rules_jvm_external)
+- [Gradle Official User Guide](https://docs.gradle.org/current/userguide/userguide.html)
+- [rules_jvm_external Documentation](https://github.com/bazelbuild/rules_jvm_external)
+- [Gradle Version Catalogs](https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog)
+- [Quarkus Documentation](https://quarkus.io/guides/)
 
 ## Skill Interoperability
 

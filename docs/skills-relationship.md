@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains a comprehensive set of **8 distinct skills** designed to handle the full lifecycle of Modern Java development with Quarkus and Bazel:
+This repository contains a comprehensive set of **12 distinct skills** designed to handle the full lifecycle of Modern Java development with Quarkus and Bazel:
 
 | Skill | Keyword | Category | Scope |
 |-------|---------|----------|-------|
@@ -16,7 +16,11 @@ This repository contains a comprehensive set of **8 distinct skills** designed t
 | **vertx-expert** 🌀 | `vertx` | Foundation | Reactive engine, Event Loop, Non-blocking |
 | **graalvm-expert** 🚀 | `graalvm` | Runtime | Native Image (AOT), Polyglot, Reflection |
 | **bazel-expert** 🏗 | `bazel` | Infrastructure | General Bazel build system |
+| **refactoring-expert** 🛠 | `refactoring` | Foundation | Clean Code & Design Patterns |
+| **code-author** ✍️ | `author` | Engineering | Google-style PR Authoring |
+| **code-reviewer** 🔍 | `reviewer` | Engineering | Google-style Code Review |
 | **quarkus-expert** ⚡ | `quarkus` | Framework | High-perf Quarkus framework |
+| **quarkus-debug** 🔍 | `quarkus-debug` | Framework | Advanced Quarkus troubleshooting |
 | **rules-quarkus** 🔧 | `rules-quarkus` | Domain-Specific | Quarkus + Bazel integration |
 
 ---
@@ -72,6 +76,9 @@ These skills have **no dependencies** and provide foundational knowledge:
 | **maven-expert** 📦 | Maven dependency management, BOMs, project lifecycle |
 | **gradle-expert** 🐘 | Gradle DSL, build optimization, multi-project builds |
 | **bazel-expert** 🏗 | Bazel rules, Starlark, hermetic builds |
+| **refactoring-expert** 🛠 | Clean Code, Refactoring (Guru), Design Patterns, SOLID |
+| **code-author** ✍️ | Small CLs, descriptions, feedback handling (Google) |
+| **code-reviewer** 🔍 | LGTM standards, speed, mentoring (Google) |
 
 ### Layer 2: Framework & Runtime (Depends on Foundation)
 These skills build upon Layer 1:
@@ -81,13 +88,14 @@ These skills build upon Layer 1:
 | **vertx-expert** 🌀 | `java-expert` | Reactive programming, Event Loop, non-blocking I/O |
 | **graalvm-expert** 🚀 | `java-expert` | Native Image AOT compilation, polyglot runtime |
 | **quarkus-expert** ⚡ | `java-expert`, `vertx-expert`, `graalvm-expert` | Quarkus framework, augmentation, CDI, Mutiny |
+| **quarkus-debug** 🔍 | `java-expert`, `quarkus-expert`, `vertx-expert`, `graalvm-expert` | Deep troubleshooting, Mutiny debugging, Native Image diagnostics |
 
 ### Layer 3: Integration (Domain-Specific)
 These skills combine multiple layers for specific use cases:
 
 | Skill | Depends On | Description |
 |-------|------------|-------------|
-| **rules-quarkus** 🔧 | **All 7 skills above** | Quarkus + Bazel integration, migration from Maven/Gradle |
+| **rules-quarkus** 🔧 | **All foundational skills above** | Quarkus + Bazel integration, migration from Maven/Gradle |
 
 ---
 
@@ -137,6 +145,41 @@ These skills combine multiple layers for specific use cases:
 - Gradle build optimization
 - Multi-project builds
 - Migrating from Gradle to Bazel
+
+---
+
+### 3b. refactoring-expert 🛠 (Independent - Layer 1)
+**Purpose:** Clean Code and Structural design expertise.
+
+**Covers:**
+- Code Smells (Bloaters, OO Abusers, Dispensables)
+- Refactoring Techniques (guru-based)
+- Creational, Structural, Behavioral Patterns
+- SOLID, DRY, KISS, YAGNI principles
+
+**When to use:**
+- Architectural design decisions
+- Code quality improvements
+- Pattern implementation guidance
+
+---
+
+### 3c. code-author ✍️ (Independent - Layer 1)
+**Purpose:** Professional code change authoring.
+
+**Covers:**
+- Small CLs, descriptions, feedback handling
+- Separating refactoring from feature changes
+- Self-review and style consistency
+
+---
+
+### 3d. code-reviewer 🔍 (Independent - Layer 1)
+**Purpose:** High-quality code review conducting.
+
+**Covers:**
+- LGTM standards, speed, mentoring
+- Distinguishing requirements vs suggestions (Nit)
 
 ---
 
@@ -209,6 +252,24 @@ These skills combine multiple layers for specific use cases:
 
 ---
 
+### 7b. quarkus-debug 🔍 (Depends on java, quarkus, vertx, graalvm - Layer 2)
+**Purpose:** Advanced troubleshooting and debugging.
+
+**Covers:**
+- Dev Mode debugging, JPDA, Dev UI, Continuous Testing
+- Reactive debugging (Mutiny), Context Propagation, Event Loop warnings
+- Native Image (AOT) debugging, GraalVM Agent, GDB/LLDB
+- Build-time (Augmentation) debugging, bytecode inspection
+- Memory leaks, ClassLoader conflicts, Dev Services troubleshooting
+
+**When to use:**
+- Deep troubleshooting of Quarkus apps
+- Debugging reactive/asynchronous code
+- Native image runtime failures
+- Build-time augmentation errors
+
+---
+
 ### 8. rules-quarkus 🔧 (Depends on all - Layer 3)
 **Purpose:** Specialized integration for Quarkus on Bazel.
 
@@ -232,8 +293,11 @@ These skills combine multiple layers for specific use cases:
 | Scenario | Primary Skill | Secondary Skill |
 |----------|---------------|-----------------|
 | "Build a Native Image for Quarkus" | `@quarkus` | `@graalvm` |
-| "Troubleshoot reflection error in native" | `@graalvm` | `@quarkus` |
-| "Explain why Event Loop is blocked" | `@vertx` | `@java` |
+| "Troubleshoot reflection error in native" | `@graalvm` | `@quarkus-debug` |
+| "Explain why Event Loop is blocked" | `@vertx` | `@quarkus-debug` |
+| "Review this logic for bugs" | `@reviewer` | `@refactoring` |
+| "Prepare a PR with Risk assessment" | `@author` | `@reviewer` |
+| "Refactor switch into Strategy" | `@refactoring` | `@java` |
 | "Migrate from Gradle to Bazel" | `@rules-quarkus` | `@gradle`, `@bazel` |
 | "Configure Quarkus on Bazel" | `@rules-quarkus` | `@bazel`, `@quarkus` |
 | "Migrate from Maven to Bazel" | `@rules-quarkus` | `@maven`, `@bazel` |
@@ -248,16 +312,20 @@ These skills combine multiple layers for specific use cases:
 
 This matrix shows which skills **depend on** or **benefit from** other skills:
 
-| Skill | java | maven | gradle | vertx | graalvm | bazel | quarkus |
-|-------|------|-------|--------|-------|---------|-------|---------|
-| **java-expert** ☕ | — | — | — | — | — | — | — |
-| **maven-expert** 📦 | ◐ | — | — | — | — | — | — |
-| **gradle-expert** 🐘 | ◐ | — | — | — | — | — | — |
-| **vertx-expert** 🌀 | ● | — | — | — | — | — | — |
-| **graalvm-expert** 🚀 | ● | — | — | — | — | — | — |
-| **bazel-expert** 🏗 | ◐ | — | — | — | — | — | — |
-| **quarkus-expert** ⚡ | ● | ◐ | ◐ | ● | ● | — | — |
-| **rules-quarkus** 🔧 | ● | ● | ● | ◐ | ◐ | ● | ● |
+| Skill | java ☕ | maven 📦 | gradle 🐘 | vertx 🌀 | graalvm 🚀 | bazel 🏗 | refact 🛠 | author ✍️ | review 🔍 | debug 🔍 | quarkus ⚡ | rules 🔧 |
+|-------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **java-expert** ☕ | — | — | — | — | — | — | — | — | — | — | — | — |
+| **maven-expert** 📦 | ◐ | — | — | — | — | — | — | — | — | — | — | — |
+| **gradle-expert** 🐘 | ◐ | — | — | — | — | — | — | — | — | — | — | — |
+| **vertx-expert** 🌀 | ● | — | — | — | — | — | — | — | — | — | — | — |
+| **graalvm-expert** 🚀 | ● | — | — | — | — | — | — | — | — | — | — | — |
+| **bazel-expert** 🏗 | ◐ | — | — | — | — | — | — | — | — | — | — | — |
+| **refactor-expert** 🛠 | ● | — | — | — | — | — | — | — | — | — | — | — |
+| **code-author** ✍️ | ◐ | — | — | — | — | — | ◐ | — | ● | — | ◐ | ◐ |
+| **code-reviewer** 🔍 | ● | — | — | ● | ● | — | ● | ● | — | ● | ● | ● |
+| **quarkus-debug** 🔍 | ● | — | — | ● | ● | — | — | — | — | — | ● | ● |
+| **quarkus-expert** ⚡ | ● | ◐ | ◐ | ● | ● | — | ◐ | — | — | ◐ | — | — |
+| **rules-quarkus** 🔧 | ● | ● | ● | ◐ | ◐ | ● | ◐ | ● | ● | ● | ● | — |
 
 **Legend:**
 - `●` = **Strong dependency** (requires knowledge from this skill)
